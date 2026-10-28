@@ -13,3 +13,25 @@
   color: #4b5563;
 }
 /* FINAL HEADER */
+
+/* INÍCIO PRÓXIMO FERIADO */
+
+.next-holiday {
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #1f4e79;
+  color: #ffffff;
+}
+
+.next-holiday h2 {
+  font-size: 22px;
+}
+
+.countdown {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* FINAL PRÓXIMO FERIADO */
