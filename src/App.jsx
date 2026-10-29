@@ -24,7 +24,6 @@ function App() {
             date={item.date}
             name={item.name}
             weekday={item.weekday}
-            type={item.type}
           />
         ))}
       </main>
