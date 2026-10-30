@@ -20,3 +20,13 @@
   padding: 24px;
   text-align: center;
 }
+
+status {
+  padding: 24px;
+  text-align: center;
+}
+
+.error {
+  color: #b91c1c;
+  font-weight: bold;
+}
