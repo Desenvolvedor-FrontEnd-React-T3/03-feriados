@@ -3,6 +3,7 @@ import "./App.css";
 /* Components Imports */
 import Header from "./components/Header";
 import Holidaycard from "./components/HolidayCard";
+import MonthFilter from "./components/MonthFilter";
 import NextHoliday from "./components/NextHoliday";
 import YearForm from "./components/YearForm";
 
@@ -18,6 +19,7 @@ function App() {
 
       <section className="filters">
         <YearForm />
+        <MonthFilter />
       </section>
 
       <p className="count">14 feriados em 2026</p>
