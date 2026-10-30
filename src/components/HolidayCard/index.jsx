@@ -1,5 +1,7 @@
 import "./holiday-card.css";
 
+const openedAt = new Date();
+
 export default function Holidaycard({ date, name, weekday }) {
   const day = new Date(`${date}T00:00:00`);
 
@@ -13,13 +15,22 @@ export default function Holidaycard({ date, name, weekday }) {
 
   // console.log(isLongWeekend);
 
+  const holidayDate = new Date(`${date}T23:59:59`);
+
+  // console.log(holidayDate);
+
+  const isPast = holidayDate < openedAt;
+  //console.log(openedAt);
+
   return (
-    <article className="holiday-card">
+    <article className={isPast ? "holiday-card past" : "holiday-card"}>
       <p className="holiday-date">{formattedDate}</p>
 
       <div className="holiday-info">
         <h2>{name}</h2>
-        <p>{weekday}</p>
+        <p>
+          {weekday} {isPast && "· já passou"}
+        </p>
       </div>
 
       {isLongWeekend && <span className="tag long-weekend">feriadão</span>}
