@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Holidaycard from "./components/HolidayCard";
 import NextHoliday from "./components/NextHoliday";
+import YearForm from "./components/YearForm";
 
 /* Mocked data */
 import holidays from "./data/holidays";
@@ -14,6 +15,10 @@ function App() {
       <Header />
 
       <NextHoliday />
+
+      <section className="filters">
+        <YearForm />
+      </section>
 
       <p className="count">14 feriados em 2026</p>
 
