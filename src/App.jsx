@@ -13,6 +13,7 @@ import YearForm from "./components/YearForm";
 // import holidays from "./data/holidays";
 
 const apiURL = "https://brasilapi.com.br/api/feriados/v1/";
+const openedAt = new Date();
 
 function App() {
   const [month, setMonth] = useState("");
@@ -56,6 +57,13 @@ function App() {
     return month == "" || holiday.date.includes(`-${month}-`);
   });
 
+  const upcomingHolidays = holidays.filter((holiday) => {
+    return new Date(`${holiday.date}T23:59:59`) >= openedAt;
+  });
+
+  // console.log(openedAt);
+  // console.log(upcomingHolidays);
+
   let content = "";
 
   if (loading) {
@@ -89,7 +97,9 @@ function App() {
     <>
       <Header />
 
-      <NextHoliday />
+      {upcomingHolidays.length > 0 && (
+        <NextHoliday holiday={upcomingHolidays[0]} />
+      )}
 
       <section className="filters">
         <YearForm year={year} onSearch={setYear} />
