@@ -1,0 +1,32 @@
+.holiday-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.count {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.empty {
+  padding: 24px;
+  text-align: center;
+}
+
+status {
+  padding: 24px;
+  text-align: center;
+}
+
+.error {
+  color: #b91c1c;
+  font-weight: bold;
+}
